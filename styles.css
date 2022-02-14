@@ -1,0 +1,897 @@
+@import url('https://fonts.googleapis.com/css2?family=Glory&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Glory', sans-serif;
+    color: ivory;
+}
+
+body {
+    background: #02171D;
+    overflow-x: hidden;
+}
+
+.dots {
+    border: 0;
+    border-top: 0.4rem dotted ivory;
+    margin: 1rem 45%;
+}
+
+/* //////////////////// Navbar CSS ///////////////////// */
+
+nav {
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
+    width: 100%;
+    background: #02171D;
+    box-shadow: 0 0 1rem black;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links a {
+    color: ivory;
+    text-decoration: none;
+    letter-spacing: 0.05rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    margin: 0 1rem;
+    text-transform: uppercase;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    font-weight: 700;
+    background-color: ivory;
+    color: #02171D;
+    border-radius: 0.1rem;
+    transition: 0.5s ease-in;
+}
+
+nav .burger {
+    cursor: pointer;
+    display: none;
+}
+
+nav .burger div {
+    margin: 0.2rem 0;
+    height: 0.15rem;
+    width: 1.5rem;
+    background-color: ivory;
+    transition: 0.5s ease-in;
+}
+
+/* //////////////////// Sections CSS ///////////////////// */
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* //////////////////// Home CSS ///////////////////// */
+
+#home {
+    height: 100vh;
+    background: url("./images/home_background.jpg");
+    background-size: cover;
+}
+
+#home h1 {
+    font-size: 4rem;
+    margin-top: 3rem;
+}
+
+#home h2 {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+}
+
+.arrow {
+    height: 3rem;
+    animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 1;
+        transform: translate(0px, -20px);
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0px, 20px);
+    }
+}
+
+/* //////////////////// About CSS ///////////////////// */
+
+#about .about-items {
+    display: flex;
+}
+
+.myself,
+.education {
+    box-shadow: 0rem 0rem 2rem black;
+    border-radius: 1rem;
+    width: 50%;
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem 1rem;
+}
+
+.myself img {
+    height: 15rem;
+    border: 0.2rem solid ivory;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.myself h1,
+.education h1 {
+    font-size: 2.5rem;
+}
+
+.myself hr,
+.education hr {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.myself p,
+.education p {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+/* //////////////////// Experience CSS ///////////////////// */
+
+#experience .experience-items {
+    display: flex;
+}
+
+.experience-card {
+    box-shadow: 0rem 0rem 2rem black;
+    border-radius: 1rem;
+    width: 50%;
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem 1rem;
+    display: grid;
+    align-content: space-between;
+}
+
+.experience-card h1 {
+    font-size: 2.5rem;
+}
+
+.experience-card hr {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.experience-card p {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.experience-card ul {
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+/* //////////////////// Skills CSS ///////////////////// */
+
+.skill-box {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    box-shadow: 0rem 0rem 2rem black;
+    border-radius: 1rem;
+    width: 100%;
+    margin: 2rem 1rem;
+}
+
+.skill-box h1 {
+    margin: 1rem auto;
+    font-size: 2.2rem;
+    text-align: left;
+}
+
+.skill-list {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+.technical,
+.professional,
+.certifications {
+    margin: 2rem;
+}
+
+.tech-skill,
+.pro-skill {
+    margin: 1rem;
+}
+
+.tech-skill li,
+.pro-skill li {
+    list-style: circle;
+    text-align: left;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+.certifications h1 {
+    text-align: center;
+}
+
+.certifications .certificates ul {
+    text-align: left;
+    list-style: circle;
+    font-size: 1.3rem;
+    margin: 1rem 2rem;
+    margin-right: 1rem;
+}
+
+.certifications .certificates li {
+    margin-top: 1rem;
+    margin-right: 0;
+    box-shadow: inset 0rem 0rem 0.3rem ivory;
+    border-radius: 0.5rem;
+    padding: 0.3rem 0.8rem;
+}
+
+.certifications .certificates a {
+    text-decoration: none;
+}
+
+.certificates li:hover {
+    box-shadow: inset 0rem 0rem 0.5rem cyan;
+}
+
+/* //////////////////// Work CSS ///////////////////// */
+
+.work {
+    display: block;
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.work h1 {
+    font-size: 2.5rem;
+}
+
+.work h1 a {
+    font-size: 2rem;
+    text-decoration: none;
+    box-shadow: inset 0rem 0rem 0.3rem ivory;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.work h1 a:hover {
+    box-shadow: inset 0rem 0rem 0.8rem cyan;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 1.3rem;
+    margin-bottom: 1.3rem;
+}
+
+.work-card {
+    display: grid;
+    padding: 1rem;
+    margin: 0.7rem;
+    box-shadow: 0rem 0rem 2rem black;
+    border-radius: 1rem;
+    justify-content: space-evenly;
+}
+
+.work-card h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.work-card p {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+}
+
+.card-buttons {
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+.card-buttons a {
+    text-decoration: none;
+    box-shadow: inset 0rem 0rem 0.3rem ivory;
+    border-radius: 0.5rem;
+    margin: 0 0.2rem;
+    padding: 0.4rem;
+    font-size: 1.2rem;
+}
+
+.card-buttons a:hover {
+    box-shadow: inset 0rem 0rem 0.5rem cyan;
+}
+
+/* //////////////////// Connect CSS ///////////////////// */
+
+#connect {
+    height: fit-content;
+    background: url("./images/home_background.jpg");
+    background-size: cover;
+}
+
+.connect {
+    display: block;
+    padding-bottom: 2rem;
+}
+
+.connect h1 {
+    font-size: 2.5rem;
+    padding: 2rem 1rem 1rem;
+}
+
+.connect h2 {
+    font-size: 1.6rem;
+}
+
+.connect p {
+    font-size: 1.5rem;
+}
+
+.contact-card {
+    display: grid;
+    grid-template-columns: 45% 40% 15%;
+    padding: 1rem;
+    margin: 2rem 3rem 0rem;
+    box-shadow: 0rem 0rem 2rem black;
+    border-radius: 0.5rem;
+}
+
+.contact-form {
+    text-align: left;
+    padding: 1rem;
+    margin-right: 2rem;
+}
+
+.contact-form p {
+    margin-bottom: 0.5rem;
+}
+
+.contact-form form label {
+    font-size: 1.rem;
+    display: block;
+    margin-top: 1.1rem;
+}
+
+.contact-form .input-field {
+    width: 100%;
+    height: 2.5rem;
+}
+
+.contact-form .message-area {
+    height: 6rem;
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    color: ivory;
+    font-size: 1.3rem;
+    padding: 0 0.5rem;
+    background: none;
+    box-shadow: inset 0rem 0rem 0.3rem ivory;
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+}
+
+.contact-form textarea {
+    padding: 0.5rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form .send-button:focus {
+    box-shadow: inset 0rem 0rem 0.5rem cyan;
+}
+
+.contact-form .send-button {
+    cursor: pointer;
+    padding: 0.5rem;
+    background: none;
+    font-size: 1.4rem;
+    color: ivory;
+    border: none;
+    box-shadow: inset 0rem 0rem 0.3rem ivory;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    outline: none;
+}
+
+.contact-form button:hover {
+    box-shadow: inset 0rem 0rem 0.5rem cyan;
+}
+
+.contact-form i {
+    font-size: 1.55rem;
+    margin-left: 0.5rem;
+}
+
+.contact-info {
+    text-align: left;
+    padding: 1rem;
+    padding-left: 2rem;
+}
+
+.contact-info .contact-details {
+    padding-top: 2rem;
+}
+
+.contact-info .contact-details .contact-item {
+    display: flex;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info .contact-details .contact-item i {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.contact-info .contact-details .contact-item p {
+    font-size: 1.3rem;
+}
+
+.contact-info .contact-details .resume a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: flex;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: inset 0rem 0rem 0.5rem ivory;
+}
+
+.contact-info .contact-details .resume a:hover {
+    box-shadow: inset 0rem 0rem 0.5rem cyan;
+}
+
+.social {
+    display: grid;
+    margin: 1rem;
+    font-size: 2rem;
+    align-content: space-around;
+}
+
+.social .social-link {
+    padding: 1rem;
+    width: 100%;
+}
+
+.social .social-link:hover {
+    box-shadow: inset 0rem 0rem 0.5rem cyan;
+    border-radius: 1rem;
+}
+
+/* ------------------------ Media Query Small Screen ------------------------ */
+
+@media only screen and (max-width: 950px) {
+    .dots {
+        border: 0;
+        border-top: 0.35rem dotted ivory;
+        margin: 1rem 45%;
+    }
+    .nav-links a {
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.5rem 1.2rem;
+        margin: 0 0.8rem;
+    }
+    /* //////////////////// Home CSS ///////////////////// */
+    #home h1 {
+        font-size: 3.5rem;
+        margin-top: 3rem;
+    }
+    #home h2 {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        font-size: 2.5rem;
+    }
+    .arrow {
+        height: 2.5rem;
+    }
+    /* //////////////////// About CSS ///////////////////// */
+    .myself img {
+        height: 12rem;
+        border: 0.2rem solid ivory;
+        border-radius: 50%;
+        margin-bottom: 1.2rem;
+    }
+    .myself h1,
+    .education h1 {
+        font-size: 2.2rem;
+    }
+    .myself p,
+    .education p {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
+    /* //////////////////// Experience CSS ///////////////////// */
+    .experience-card h1 {
+        font-size: 2.2rem;
+    }
+    .experience-card p {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
+    /* //////////////////// Skills CSS ///////////////////// */
+    .skill-list {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+    }
+    .professional {
+        margin-top: 0;
+    }
+    /* //////////////////// Skills CSS ///////////////////// */
+    .contact-card {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding: 1rem;
+        margin: 2rem 3rem 0rem;
+        box-shadow: 0rem 0rem 2rem black;
+        border-radius: 0.5rem;
+    }
+    .social {
+        display: flex;
+        width: 200%;
+        margin: 0;
+    }
+    .social .social-link {
+        /* padding: 1rem; */
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    /* //////////////////// Work CSS ///////////////////// */
+    .cards {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    nav {
+        position: fixed;
+        left: 88%;
+        height: 7vh;
+        width: 12%;
+        margin-left: auto;
+        border-radius: 0 0 0 0.5rem;
+    }
+    nav .nav-links {
+        position: absolute;
+        top: 0%;
+        right: -10rem;
+        display: grid;
+        grid-template-rows: repeat(6, 13vh);
+        padding-top: 5rem;
+        justify-content: left;
+        align-items: center;
+        background: #02171D;
+        height: 100vh;
+        width: 10rem;
+        box-shadow: 0 0 1rem black;
+        transition: 0.7s ease-in;
+    }
+    nav .nav-links.slideNavbar {
+        transform: translateX(-10rem);
+        transition: 0.7s ease-in;
+    }
+    .nav-links a {
+        margin-left: 2rem;
+    }
+    .nav-links a.active,
+    .nav-links a:hover {
+        background-color: ivory;
+        width: 100%;
+        border-radius: 0.2rem;
+    }
+    nav .burger {
+        display: block;
+        z-index: 2;
+    }
+    .toggle .line1 {
+        transform: rotate(-45deg) translateY(0.48rem);
+        transition: 0.5s ease-in;
+    }
+    .toggle .line2 {
+        opacity: 0;
+        transition: 0.5s ease-in;
+    }
+    .toggle .line3 {
+        transition: 0.5s ease-in;
+        transform: rotate(45deg) translateY(-0.48rem);
+    }
+    .navLinksFade {
+        animation: navLinksFade 1.5s;
+    }
+    @keyframes navLinksFade {
+        from {
+            opacity: 0;
+            transform: translateX(10rem);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0rem);
+        }
+    }
+    /* //////////////////// Home CSS ///////////////////// */
+    #home h1 {
+        font-size: 3rem;
+        margin-top: 3rem;
+    }
+    #home h2 {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        font-size: 2rem;
+    }
+    .arrow {
+        height: 2.2rem;
+    }
+    /* //////////////////// About CSS ///////////////////// */
+    #about .about-items {
+        display: grid;
+        padding: 1rem;
+    }
+    .about-items .myself,
+    .about-items .education {
+        margin: 1rem 0;
+        width: 100%;
+    }
+    /* //////////////////// Experience CSS ///////////////////// */
+    #experience .experience-items {
+        display: grid;
+        padding: 1rem;
+    }
+    .experience-card {
+        margin: 1rem 0;
+        width: 100%;
+    }
+    /* //////////////////// Skills CSS ///////////////////// */
+    #skills .skill-box {
+        display: block;
+        padding-bottom: 1rem;
+    }
+    .skill-list {
+        display: flex;
+    }
+    .professional {
+        margin-top: 2rem;
+    }
+    /* //////////////////// Connect CSS ///////////////////// */
+    .contact-card {
+        display: block;
+    }
+    .contact-form {
+        margin-right: 0;
+        margin: 1rem;
+    }
+    .contact-info {
+        padding-left: 1rem;
+        margin: 1rem;
+    }
+    .contact-info .contact-details .resume a {
+        margin: 0 auto;
+    }
+    .social {
+        display: flex;
+        margin: 1rem 0;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    p,
+    li {
+        font-size: 1.3rem;
+    }
+    nav {
+        left: 86%;
+        width: 14%;
+    }
+    /* //////////////////// Home CSS ///////////////////// */
+    #home h1 {
+        font-size: 2.5rem;
+        margin-top: 3rem;
+    }
+    #home h2 {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        font-size: 1.7rem;
+    }
+    .arrow {
+        height: 2rem;
+    }
+    /* //////////////////// Skills CSS ///////////////////// */
+    .skill-list {
+        display: block;
+    }
+    .professional {
+        margin-top: 2rem;
+    }
+    .certifications h1,
+    .technical h1,
+    .professional h1 {
+        text-align: left;
+    }
+    /* //////////////////// Work CSS ///////////////////// */
+    .cards {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    /* //////////////////// Connect CSS ///////////////////// */
+    .contact-card {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+    .connect p {
+        font-size: 1.4rem;
+        margin: 0.5rem;
+    }
+    .contact-form,
+    .contact-info {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .contact-info .contact-details .contact-item {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    /* //////////////////// Home CSS ///////////////////// */
+    #home h1 {
+        font-size: 2.1rem;
+        margin-top: 3rem;
+    }
+    #home h2 {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        font-size: 1.8rem;
+    }
+    .arrow {
+        height: 2rem;
+    }
+    /* //////////////////// About CSS ///////////////////// */
+    .about-items .myself {
+        padding: 1rem;
+    }
+    .myself img {
+        height: 9rem;
+        border: 0.2rem solid ivory;
+        border-radius: 50%;
+        margin-bottom: 1.2rem;
+    }
+    .myself h1,
+    .education h1 {
+        font-size: 2rem;
+    }
+    .myself p,
+    .education p {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+    /* //////////////////// Experience CSS ///////////////////// */
+    .experience-items .experience-card {
+        padding: 1rem;
+    }
+    .experience-card h1 {
+        font-size: 2rem;
+    }
+    .experience-card p {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+    .experience-card li {
+        font-size: 1.1rem;
+    }
+    /* //////////////////// Skills CSS ///////////////////// */
+    .skills h1 {
+        font-size: 1.8rem;
+    }
+    .skills li {
+        font-size: 1.1rem;
+    }
+    /* //////////////////// Work CSS ///////////////////// */
+    .work h1 {
+        font-size: 2rem;
+    }
+    .work-card h1 {
+        font-size: 1.8rem;
+    }
+    /* //////////////////// Connect CSS ///////////////////// */
+    #connect h1 {
+        font-size: 2rem;
+    }
+    #connect p {
+        font-size: 1.3rem;
+    }
+    .contact-card {
+        padding: 0.5rem;
+        margin: 2rem 1rem;
+    }
+    .contact-info .contact-details {
+        padding-top: 1rem;
+    }
+    .contact-info .contact-details .contact-item {
+        margin-bottom: 0;
+    }
+    .contact-info .contact-details .contact-item i {
+        font-size: 1.2rem;
+        margin-right: 0;
+    }
+    #connect .contact-info .contact-details .contact-item p {
+        font-size: 1.2rem;
+    }
+    .social-link {
+        font-size: 1.6rem;
+    }
+    .contact-info .contact-details .resume a {
+        padding: 0.7rem;
+        border-radius: 0.5rem;
+        box-shadow: inset 0rem 0rem 0.5rem ivory;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    nav {
+        left: 82%;
+        width: 18%;
+    }
+    /* //////////////////// Skills CSS ///////////////////// */
+    .technical,
+    .professional,
+    .certifications {
+        margin-left: 1rem;
+        margin-right: 0.5rem;
+    }
+    .technical li,
+    .professional li {
+        margin-top: 0.5rem;
+    }
+    /* //////////////////// Connect CSS ///////////////////// */
+    .contact-info .contact-details .contact-item i {
+        font-size: 1.1rem;
+    }
+    #connect .contact-info .contact-details .contact-item p {
+        font-size: 1.1rem;
+    }
+}
